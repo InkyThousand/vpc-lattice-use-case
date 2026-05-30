@@ -1,0 +1,59 @@
+{
+  "inventory": [
+    {
+      "PutRequest": {
+        "Item": {
+          "item_id":   { "S": "dune-001" },
+          "title":     { "S": "Dune" },
+          "author":    { "S": "Frank Herbert" },
+          "quantity":  { "N": "42" },
+          "available": { "BOOL": true }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "item_id":   { "S": "foundation-001" },
+          "title":     { "S": "Foundation" },
+          "author":    { "S": "Isaac Asimov" },
+          "quantity":  { "N": "17" },
+          "available": { "BOOL": true }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "item_id":   { "S": "neuromancer-001" },
+          "title":     { "S": "Neuromancer" },
+          "author":    { "S": "William Gibson" },
+          "quantity":  { "N": "5" },
+          "available": { "BOOL": true }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "item_id":   { "S": "lefthand-001" },
+          "title":     { "S": "The Left Hand of Darkness" },
+          "author":    { "S": "Ursula K. Le Guin" },
+          "quantity":  { "N": "0" },
+          "available": { "BOOL": false }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "item_id":   { "S": "hyperion-001" },
+          "title":     { "S": "Hyperion" },
+          "author":    { "S": "Dan Simmons" },
+          "quantity":  { "N": "23" },
+          "available": { "BOOL": true }
+        }
+      }
+    }
+  ]
+}
