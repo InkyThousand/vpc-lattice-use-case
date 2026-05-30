@@ -102,6 +102,28 @@ resource "aws_vpclattice_auth_policy" "inventory" {
 }
 
 # -----------------------------------------------------------------------
+# AWS RAM Resource Share — share Inventory Service with Account A
+# -----------------------------------------------------------------------
+resource "aws_ram_resource_share" "inventory_service_share" {
+  name                      = "inventory-service-share"
+  allow_external_principals = true
+
+  tags = {
+    Name = "inventory-service-share"
+  }
+}
+
+resource "aws_ram_resource_association" "inventory_service" {
+  resource_share_arn = aws_ram_resource_share.inventory_service_share.arn
+  resource_arn       = aws_vpclattice_service.inventory.arn
+}
+
+resource "aws_ram_principal_association" "account_a" {
+  resource_share_arn = aws_ram_resource_share.inventory_service_share.arn
+  principal          = var.account_a_id
+}
+
+# -----------------------------------------------------------------------
 # VPC Lattice Listener Rule — weighted routing 80/20 (v1/v2)
 # -----------------------------------------------------------------------
 resource "aws_vpclattice_listener_rule" "weighted_routing" {

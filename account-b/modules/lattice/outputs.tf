@@ -27,3 +27,8 @@ output "lattice_listener_arn" {
   description = "ARN of the VPC Lattice HTTP listener"
   value       = aws_vpclattice_listener.inventory_http.arn
 }
+
+output "ram_share_arn" {
+  description = "ARN of the AWS RAM resource share for the Inventory service"
+  value       = aws_ram_resource_share.inventory_service_share.arn
+}
