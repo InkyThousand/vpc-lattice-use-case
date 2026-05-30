@@ -22,3 +22,13 @@ output "dynamodb_table_arn" {
   description = "ARN of the DynamoDB inventory table"
   value       = module.lambda.dynamodb_table_arn
 }
+
+output "lattice_service_dns_name" {
+  description = "DNS name of the VPC Lattice Inventory service"
+  value       = module.lattice.lattice_service_dns_name
+}
+
+output "lattice_service_arn" {
+  description = "ARN of the VPC Lattice Inventory service"
+  value       = module.lattice.lattice_service_arn
+}
