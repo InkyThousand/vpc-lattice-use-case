@@ -13,11 +13,10 @@ output "lambda_security_group_id" {
   value       = module.networking.lambda_security_group_id
 }
 
-# Populated once the lambda module is added (task 11)
-# output "orders_lambda_role_arn" {
-#   description = "IAM role ARN of the Orders Lambda — provide this to Account B for its auth policy"
-#   value       = module.lambda.orders_lambda_role_arn
-# }
+output "orders_lambda_role_arn" {
+  description = "IAM role ARN of the Orders Lambda — provide this to Account B for its auth policy"
+  value       = module.lambda.orders_lambda_role_arn
+}
 
 # Populated once the lattice module is added (task 12)
 # output "service_network_arn" {

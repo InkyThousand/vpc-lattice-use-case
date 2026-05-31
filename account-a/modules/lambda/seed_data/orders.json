@@ -1,0 +1,7 @@
+{
+  "orders": [
+    { "PutRequest": { "Item": { "order_id": { "S": "ord-001" }, "item_id": { "S": "dune-001" },        "customer": { "S": "user-42" }, "status": { "S": "pending" } } } },
+    { "PutRequest": { "Item": { "order_id": { "S": "ord-002" }, "item_id": { "S": "neuromancer-001" }, "customer": { "S": "user-07" }, "status": { "S": "pending" } } } },
+    { "PutRequest": { "Item": { "order_id": { "S": "ord-003" }, "item_id": { "S": "hyperion-001" },    "customer": { "S": "user-13" }, "status": { "S": "pending" } } } }
+  ]
+}

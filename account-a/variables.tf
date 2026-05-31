@@ -32,3 +32,9 @@ variable "availability_zones" {
   type        = list(string)
   default     = ["us-east-1a", "us-east-1b"]
 }
+
+variable "inventory_service_dns" {
+  description = "VPC Lattice DNS hostname for the Inventory service (output from Account B)"
+  type        = string
+  default     = ""
+}
