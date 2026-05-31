@@ -18,8 +18,7 @@ output "orders_lambda_role_arn" {
   value       = module.lambda.orders_lambda_role_arn
 }
 
-# Populated once the lattice module is added (task 12)
-# output "service_network_arn" {
-#   description = "ARN of the VPC Lattice Service Network"
-#   value       = module.lattice.service_network_arn
-# }
+output "service_network_arn" {
+  description = "ARN of the VPC Lattice Service Network"
+  value       = module.lattice.service_network_arn
+}

@@ -37,3 +37,9 @@ module "lambda" {
   subnet_ids            = module.networking.private_subnet_ids
   security_group_ids    = [module.networking.lambda_security_group_id]
 }
+
+module "lattice" {
+  source = "./modules/lattice"
+
+  vpc_id = module.networking.vpc_id
+}
