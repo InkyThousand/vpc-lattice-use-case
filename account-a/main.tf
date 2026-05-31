@@ -41,5 +41,7 @@ module "lambda" {
 module "lattice" {
   source = "./modules/lattice"
 
-  vpc_id = module.networking.vpc_id
+  vpc_id                = module.networking.vpc_id
+  inventory_service_arn = var.inventory_service_arn
+  ram_share_arn         = var.ram_share_arn
 }
