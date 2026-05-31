@@ -22,3 +22,13 @@ output "service_network_arn" {
   description = "ARN of the VPC Lattice Service Network"
   value       = module.lattice.service_network_arn
 }
+
+output "orders_lambda_name" {
+  description = "Name of the Orders Lambda function"
+  value       = module.lambda.orders_lambda_name
+}
+
+output "orders_lambda_invoke_command" {
+  description = "Sample AWS CLI command to invoke the Orders Lambda with a test order"
+  value       = "aws lambda invoke --function-name ${module.lambda.orders_lambda_name} --payload '{\"order_id\":\"ord-001\"}' --cli-binary-format raw-in-base64-out /tmp/orders_response.json && cat /tmp/orders_response.json"
+}
